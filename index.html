@@ -11,30 +11,24 @@
       padding: 50px;
     }
 
-    h1 {
-      font-size: 30px;
-    }
-
     input {
       width: 60%;
       padding: 12px;
       border-radius: 8px;
       border: none;
-      margin-top: 20px;
     }
 
     button {
-      padding: 12px 20px;
-      margin-left: 10px;
-      border: none;
+      padding: 12px;
       border-radius: 8px;
-      background: #22c55e;
+      border: none;
+      background: green;
       color: white;
-      cursor: pointer;
+      margin-left: 10px;
     }
 
     #output {
-      margin-top: 30px;
+      margin-top: 20px;
       white-space: pre-line;
     }
   </style>
@@ -42,7 +36,7 @@
 
 <body>
 
-<h1>🤖 AI Video Creator</h1>
+<h1>🤖 Free AI Video Creator</h1>
 
 <input id="prompt" placeholder="Describe your video..." />
 <button onclick="generate()">Generate</button>
@@ -51,14 +45,15 @@
 
 <script>
 function generate() {
-  const prompt = document.getElementById("prompt").value;
+  const p = document.getElementById("prompt").value;
 
-  const betterPrompt =
-    "Create a cinematic video: " + prompt +
-    ". High quality, detailed, with dramatic lighting and smooth motion.";
+  const improved =
+    "Create a cinematic animated video: " + p +
+    ". High quality, smooth motion, detailed lighting, realistic style, 4k.";
 
   document.getElementById("output").innerText =
-    "🎬 Copy this prompt and paste into Pika Labs:\n\n" + betterPrompt;
+    "🎬 Use this prompt in Pika Labs:\n\n" + improved +
+    "\n\n👉 Opening tool...";
 
   window.open("https://pika.art", "_blank");
 }
