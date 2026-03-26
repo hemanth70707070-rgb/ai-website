@@ -1,23 +1,64 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>AI Video Generator</title>
+  <title>AI Creator</title>
+  <style>
+    body {
+      font-family: Arial;
+      background: #0f172a;
+      color: white;
+      text-align: center;
+      padding: 50px;
+    }
+
+    h1 {
+      font-size: 30px;
+    }
+
+    input {
+      width: 60%;
+      padding: 12px;
+      border-radius: 8px;
+      border: none;
+      margin-top: 20px;
+    }
+
+    button {
+      padding: 12px 20px;
+      margin-left: 10px;
+      border: none;
+      border-radius: 8px;
+      background: #22c55e;
+      color: white;
+      cursor: pointer;
+    }
+
+    #output {
+      margin-top: 30px;
+      white-space: pre-line;
+    }
+  </style>
 </head>
+
 <body>
 
-<h2>🎬 AI Video Generator</h2>
+<h1>🤖 AI Video Creator</h1>
 
-<input id="prompt" placeholder="Enter your idea..." />
+<input id="prompt" placeholder="Describe your video..." />
 <button onclick="generate()">Generate</button>
 
-<p id="msg"></p>
+<div id="output"></div>
 
 <script>
 function generate() {
   const prompt = document.getElementById("prompt").value;
 
-  document.getElementById("msg").innerText =
-    "Use this prompt in Pika Labs or Runway:\n" + prompt;
+  const betterPrompt =
+    "Create a cinematic video: " + prompt +
+    ". High quality, detailed, with dramatic lighting and smooth motion.";
+
+  document.getElementById("output").innerText =
+    "🎬 Copy this prompt and paste into Pika Labs:\n\n" + betterPrompt;
 
   window.open("https://pika.art", "_blank");
 }
