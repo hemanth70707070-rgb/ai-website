@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AI Video Generator</title>
+</head>
+<body>
+
+<h2>🎬 AI Video Generator</h2>
+
+<input id="prompt" placeholder="Enter your idea..." />
+<button onclick="generate()">Generate</button>
+
+<p id="msg"></p>
+
+<script>
+function generate() {
+  const prompt = document.getElementById("prompt").value;
+
+  document.getElementById("msg").innerText =
+    "Use this prompt in Pika Labs or Runway:\n" + prompt;
+
+  window.open("https://pika.art", "_blank");
+}
+</script>
+
+</body>
+</html>
